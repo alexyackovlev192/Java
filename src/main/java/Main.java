@@ -12,8 +12,7 @@ public class Main {
             System.out.println("4. Закрыть приложение");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Очистка буфера
-
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -22,31 +21,32 @@ public class Main {
                     System.out.print("Введите пароль: ");
                     String regPassword = scanner.nextLine();
 
-                    if (UserDAO.registerUser(regUsername, regPassword)) {
+                    if (UserDAO.registerUser(regUsername, regPassword))
                         System.out.println("Регистрация прошла успешно.");
-                    } else {
+                    else
                         System.out.println("Ошибка при регистрации.");
-                    }
                     break;
+
                 case 2:
                     System.out.print("Введите имя пользователя: ");
                     String authUsername = scanner.nextLine();
                     System.out.print("Введите пароль: ");
                     String authPassword = scanner.nextLine();
 
-                    if (UserDAO.authorizeUser(authUsername, authPassword)) {
+                    if (UserDAO.authorizeUser(authUsername, authPassword))
                         System.out.println("Авторизация успешна.");
-                    } else {
+                    else
                         System.out.println("Ошибка авторизации.");
-                    }
                     break;
+
                 case 3:
-                    // Выход из учетной записи
                     System.out.println("Выход из учетной записи.");
                     break;
+
                 case 4:
                     System.out.println("Закрытие приложения.");
-                    System.exit(0); // Завершаем выполнение приложения
+                    System.exit(0);
+
                 default:
                     System.out.println("Неверный выбор. Попробуйте еще раз.");
             }
