@@ -14,6 +14,7 @@ public class Main {
             int choice = scanner.nextInt();
             scanner.nextLine(); // Очистка буфера
 
+
             switch (choice) {
                 case 1:
                     System.out.print("Введите имя пользователя: ");
