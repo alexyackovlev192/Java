@@ -34,7 +34,7 @@ public class AuthenticationApp extends Application {
             String regUsername = usernameTextField.getText();
             String regPassword = passwordField.getText();
 
-            if (UserDAO.registerUser(regUsername, regPassword)) {
+            if (User.registerUser(regUsername, regPassword)) {
                 showMessage("Успешная регистрация", "Регистрация прошла успешно.");
                 clearFields();
             } else {
@@ -46,7 +46,7 @@ public class AuthenticationApp extends Application {
             String authUsername = usernameTextField.getText();
             String authPassword = passwordField.getText();
 
-            if (UserDAO.authorizeUser(authUsername, authPassword)) {
+            if (User.authorizeUser(authUsername, authPassword)) {
                 showMessage("Успешный вход", "Авторизация прошла успешно.");
                 clearFields();
             } else {

@@ -3,7 +3,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDAO {
+public class User {
     public static boolean registerUser(String username, String password) {
         try (Connection connection = DBConnection.getConnection()) {
             if (isUsernameExists(connection, username)) {
